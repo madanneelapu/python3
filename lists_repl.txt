@@ -1,0 +1,98 @@
+>>> langs = ["python","java","C#","JavaScript"]
+>>> langs
+['python', 'java', 'C#', 'JavaScript']
+>>> favLangs = []
+>>> favLangs
+[]
+>>> len(langs)
+4
+>>> for l in langs:
+...     print(l)
+...
+python
+java
+C#
+JavaScript
+>>> langs[1]="java 9"
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript']
+>>> langs[6]="c"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list assignment index out of range
+>>> langs.append("TypeScript")
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript']
+>>> langs.append("TypeScript")
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript', 'TypeScript']
+>>> langs.insert(0,"c")
+>>> langs
+['c', 'python', 'java 9', 'C#', 'JavaScript', 'TypeScript', 'TypeScript']
+>>> del langs[0]
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript', 'TypeScript']
+>>> langs.insert(3,"c")
+>>> langs
+['python', 'java 9', 'C#', 'c', 'JavaScript', 'TypeScript', 'TypeScript']
+>>> langs.append(10)
+>>> langs
+['python', 'java 9', 'C#', 'c', 'JavaScript', 'TypeScript', 'TypeScript', 10]
+>>> del langs[3]
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript', 'TypeScript', 10]
+>>> type(langs[0])
+<class 'str'>
+>>> langs[-1]
+10
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript', 'TypeScript', 10]
+>>> langs[-1:-3]
+[]
+>>> langs[-3:-1]
+['TypeScript', 'TypeScript']
+>>> langs[-1:-3:-1]
+[10, 'TypeScript']
+>>> del langs[-1]
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript', 'TypeScript']
+>>> lang = langs.pop()
+>>> lang
+'TypeScript'
+>>> langs
+['python', 'java 9', 'C#', 'JavaScript', 'TypeScript']
+>>> langs.sort()
+>>> langs
+['C#', 'JavaScript', 'TypeScript', 'java 9', 'python']
+>>> evens = [20,40,60]
+>>> odds = [21,45,67]
+>>> nums = [evens,odds]
+>>> nums
+[[20, 40, 60], [21, 45, 67]]
+>>> nums = evens + odds
+>>> nums
+[20, 40, 60, 21, 45, 67]
+>>> fl = langs
+>>> fl.append("VB")
+>>> fl
+['C#', 'JavaScript', 'TypeScript', 'java 9', 'python', 'VB']
+>>> langs
+['C#', 'JavaScript', 'TypeScript', 'java 9', 'python', 'VB']
+>>> max(langs)
+'python'
+>>> nums2 = nums - odds
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'list'
+>>> fl2 = fl[::]
+>>> fl2.append("PHP")
+>>> fl2
+['C#', 'JavaScript', 'TypeScript', 'java 9', 'python', 'VB', 'PHP']
+>>> fl
+['C#', 'JavaScript', 'TypeScript', 'java 9', 'python', 'VB']
+>>> nums
+[20, 40, 60, 21, 45, 67]
+>>> sorted(nums)
+[20, 21, 40, 45, 60, 67]
+>>> nums
+[20, 40, 60, 21, 45, 67]
