@@ -1,0 +1,53 @@
+>>> import sys
+>>> sys.path
+['', 'D:\\Development\\Python\\Python36\\python36.zip', 'D:\\Development\\Python\\Python36\\DLLs', 'D:\\Development\\Python\\Python36\\lib', 'D:\\Development\\Python\\Python36', 'D:\\Development\\Python\\Python36\\lib\\site-packages']
+>>> import os
+>>> os.getcwd()
+'D:\\Development\\pycharmWorkspace\\python3'
+
+D:\Development\pycharmWorkspace\python3>python my_numbers_module.py
+This is my numbers module
+executing  my numbers module as a script
+Inside printmsg function
+Module name is:  __main__
+
+D:\Development\pycharmWorkspace\python3>python
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:54:40) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import my_numbers_module
+This is my numbers module
+>>> my_numbers_module.printmsg()
+Inside printmsg function
+Module name is:  my_numbers_module
+>>>
+>>> my_numbers_module.iseven(56)
+True
+>>> my_numbers_module.iseven(97)
+False
+>>> my_numbers_module.isodd(97)
+True
+>>> my_numbers_module.isodd(56)
+False
+>>> my_numbers_module.isprime(56)
+'No! Not a Prime Number'
+>>> my_numbers_module.isprime(97)
+'Yes! Prime Number'
+
+
+D:\Development\pycharmWorkspace\python3>python primenumbers_via_cli_script.py
+This is my numbers module
+Parameters missing...
+
+D:\Development\pycharmWorkspace\python3>python primenumbers_via_cli_script.py 97
+This is my numbers module
+97 Yes! Prime Number
+
+D:\Development\pycharmWorkspace\python3>python primenumbers_via_cli_script.py 97 88 65 74 11 7 27
+This is my numbers module
+97 Yes! Prime Number
+88 No! Not a Prime Number
+65 No! Not a Prime Number
+74 No! Not a Prime Number
+11 Yes! Prime Number
+7 Yes! Prime Number
+27 No! Not a Prime Number
