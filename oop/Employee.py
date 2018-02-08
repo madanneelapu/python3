@@ -1,8 +1,10 @@
+#Static variable and static methods
+#count number of objects
 class Employee:
     # static variable
     __hraper = 25
 
-    __objectcount = 0
+    __objectcount = 0 #for counting number of objects
 
     # static method
     @staticmethod
@@ -16,11 +18,13 @@ class Employee:
     def __init__(self, name, salary):
         self.__name = name
         self.__salary = salary
-        Employee.__objectcount += 1
+        Employee.__objectcount += 1 #increment count
 
     def get_salary(self):
         return self.__salary + self.__salary * Employee.__hraper / 100
 
+    def __del__(self):
+        Employee.__objectcount -= 1 #decrement count
 
 print(Employee.get_objectcount())
 e = Employee("Abc", 50000)
