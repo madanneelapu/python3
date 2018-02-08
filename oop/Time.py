@@ -20,7 +20,11 @@ class Time:
 
     def __add__(self, other):
         seconds = self.in_seconds()
-        totalsecs = seconds + other
+
+        if isinstance(other, Time): #check if 'other' is of type 'Time'
+            totalsecs = seconds + other.in_seconds()
+        else:
+            totalsecs = seconds + other
 
         hours = totalsecs / 3600;
         minutes = (totalsecs % 3600) / 60;
@@ -44,3 +48,4 @@ print(t3.in_seconds())
 print(t1 != t3)
 print(t1 < t2)
 print(t1 + 70)
+print(t1 + t2)
