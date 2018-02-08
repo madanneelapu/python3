@@ -1,3 +1,4 @@
+#operator overloading
 class Time:
 
     def __init__(self, hh=0, mm=0, ss=0):
