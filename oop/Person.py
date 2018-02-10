@@ -1,7 +1,11 @@
 # properties example
-
+# class methods example
 
 class Person:
+
+    @classmethod
+    def create(cls): #classmethods are much like factory method
+        return Person("John Doe",30)
 
     def __init__(self, name, age):
         self.__name = name
@@ -27,6 +31,8 @@ class Person:
         else:
             self.__age = newage
 
+    def __str__(self):
+        return "%s %s" % (self.__name, self.__age)
 
 p = Person("Bill Gates", 62)
 
@@ -35,3 +41,6 @@ print(p.get_age())
 
 p.age = 70 #accessing setter
 print(p.age) #accessing getter
+
+john = Person.create() #creating an object using classmethod
+print(john)
