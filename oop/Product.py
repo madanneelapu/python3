@@ -19,7 +19,7 @@ class DiscountProduct(Product):
         super().__init__(name, price) #Calling super class init from subclass
         self._disrate = disrate
 
-    def get_price(self):
+    def get_price(self):#method overriding
         return self._price - (self._price * self._disrate / 100)
 
 
