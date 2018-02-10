@@ -16,7 +16,7 @@ class Product:
 class DiscountProduct(Product):
 
     def __init__(self, name, price, disrate):
-        super().__init__(name, price) #Calling super class init from subclass
+        super().__init__(name, price) #Calling super class init from subclass using super. Notice we are not sending 'self' as a parameter
         self._disrate = disrate
 
     def get_price(self):#method overriding
